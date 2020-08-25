@@ -1,4 +1,5 @@
 import React from "react";
+import TableProducts from "./component/TableProducts";
 import "./App.css";
 import * as ReactBootStrap from "react-bootstrap";
 
@@ -23,14 +24,7 @@ const App = () => {
     <div className="App">
       <h1>Table Products</h1>
       <ReactBootStrap.Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>{Products.map(renderProduct)}</tbody>
+        <TableProducts Products={Products} />
       </ReactBootStrap.Table>
     </div>
   );
